@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shalom | Bienestar Natural Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="nav-container">
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#productos">Productos</a>
+            </div>
+            <div class="logo">SHALOM</div>
+            <div class="nav-icons">
+                <button id="cart-icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <p class="hero-subtitle">Belleza que comienza en ti</p>
+                <h1>NUTRICIÓN, BIENESTAR Y BELLEZA EN UN SOLO LUGAR</h1>
+                <a href="#productos" class="btn-poison">Explorar Colección</a>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <div class="benefit-item">
+                <i class="fa-solid fa-leaf"></i>
+                <h3>100% Orgánico</h3>
+                <p>Ingredientes puros de origen vegetal.</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                <h3>Hecho a Mano</h3>
+                <p>Procesos artesanales con amor.</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Envíos Rápidos</h3>
+                <p>Tu bienestar en la puerta de tu casa.</p>
+            </div>
+        </section>
+
+        <section id="productos" class="products-section">
+            <p class="section-tag">Bienestar Natural</p>
+            <h2 class="section-title">Catálogo Shalom</h2>
+
+            <div class="category-nav">
+                <a href="#polvos" class="cat-link">Línea Polvos</a>
+                <a href="#tabletas" class="cat-link">Línea Tabletas</a>
+                <a href="#liquidos" class="cat-link">Línea Líquidos</a>
+            </div>
+
+            <h3 id="polvos" class="category-divider">Línea Polvos</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <div class="product-img-side">
+                            <img src="inositol.jpg" alt="Inositol" onerror="this.style.display='none'"> 
+                            <div class="img-placeholder">Inositol</div>
+                            <button class="btn-info-toggle"><i class="fa-solid fa-info"></i></button>
+                        </div>
+                        <div class="product-info-side">
+                            <button class="btn-close-info">&times;</button>
+                            <h4>Beneficios</h4>
+                            <p>Equilibrio hormonal, apoyo metabólico y mejora del estado de ánimo.</p>
+                            <hr>
+                            <h4>Ingredientes</h4>
+                            <p>Mioinositol de alta pureza.</p>
+                        </div>
+                    </div>
+                    <h3>Inositol</h3>
+                    <p class="product-price">$95.000</p>
+                    <button class="btn-add" data-name="Inositol" data-price="95000">Añadir al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <div class="product-img-side">
+                            <img src="pre-probioticos.jpg" alt="Pre y probióticos" onerror="this.style.display='none'"> 
+                            <div class="img-placeholder">Pre y probióticos</div>
+                            <button class="btn-info-toggle"><i class="fa-solid fa-info"></i></button>
+                        </div>
+                        <div class="product-info-side">
+                            <button class="btn-close-info">&times;</button>
+                            <h4>Beneficios</h4>
+                            <p>Restaura la flora intestinal y fortalece el sistema inmunológico.</p>
+                            <hr>
+                            <h4>Ingredientes</h4>
+                            <p>Cepas probióticas activas y fibra prebiótica.</p>
+                        </div>
+                    </div>
+                    <h3>Pre y probióticos</h3>
+                    <p class="product-price">$60.000</p>
+                    <button class="btn-add" data-name="Pre y probióticos" data-price="60000">Añadir al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <div class="product-img-side">
+                            <img src="batido-verde.jpg" alt="Batido Verde" onerror="this.style.display='none'"> 
+                            <div class="img-placeholder">Batido verde</div>
+                            <button class="btn-info-toggle"><i class="fa-solid fa-info"></i></button>
+                        </div>
+                        <div class="product-info-side">
+                            <button class="btn-close-info">&times;</button>
+                            <h4>Beneficios</h4>
+                            <p>Desintoxica el organismo y aporta antioxidantes naturales.</p>
+                            <hr>
+                            <h4>Ingredientes</h4>
+                            <p>Espirulina, apio, manzana verde y extractos vegetales.</p>
+                        </div>
+                    </div>
+                    <h3>Batido verde</h3>
+                    <p class="product-price">$70.000</p>
+                    <button class="btn-add" data-name="Batido verde" data-price="70000">Añadir al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <div class="product-img-side">
+                            <img src="colageno.jpg" alt="Colageno Marino" onerror="this.style.display='none'"> 
+                            <div class="img-placeholder">Colageno Marino</div>
+                            <button class="btn-info-toggle"><i class="fa-solid fa-info"></i></button>
+                        </div>
+                        <div class="product-info-side">
+                            <button class="btn-close-info">&times;</button>
+                            <h4>Beneficios</h4>
+                            <p>Mejora la elasticidad de la piel, fortalece uñas y articulaciones.</p>
+                            <hr>
+                            <h4>Ingredientes</h4>
+                            <p>Péptidos de colágeno marino hidrolizado.</p>
+                        </div>
+                    </div>
+                    <h3>Colageno Marino</h3>
+                    <p class="product-price">$60.000</p>
+                    <button class="btn-add" data-name="Colageno Marino hidrolizado" data-price="60000">Añadir al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <div class="product-img-side">
+                            <img src="fibra-natural.jpg" alt="Fibra natural" onerror="this.style.display='none'"> 
+                            <div class="img-placeholder">Fibra natural</div>
+                            <button class="btn-info-toggle"><i class="fa-solid fa-info"></i></button>
+                        </div>
+                        <div class="product-info-side">
+                            <button class="btn-close-info">&times;</button>
+                            <h4>Beneficios</h4>
+                            <p>Facilita el tránsito intestinal y da sensación de saciedad.</p>
+                            <hr>
+                            <h4>Ingredientes</h4>
+                            <p>Psyllium husk y salvado de trigo.</p>
+                        </div>
+                    </div>
+                    <h3>Fibra natural</h3>
+                    <p class="product-price">$60.000</p>
+                    <button class="btn-add" data-name="Fibra natural" data-price="60000">Añadir al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <div class="product-img-side">
+                            <img src="vitamina-c.jpg" alt="Vitamina C" onerror="this.style.display='none'"> 
+                            <div class="img-placeholder">Vitamina C</div>
+                            <button class="btn-info-toggle"><i class="fa-solid fa-info"></i></button>
+                        </div>
+                        <div class="product-info-side">
+                            <button class="btn-close-info">&times;</button>
+                            <h4>Beneficios</h4>
+                            <p>Potente antioxidante, refuerza las defensas naturales.</p>
+                            <hr>
+                            <h4>Ingredientes</h4>
+                            <p>Ácido ascórbico de origen natural.</p>
+                        </div>
+                    </div>
+                    <h3>Vitamina C</h3>
+                    <p class="product-price">$60.000</p>
+                    <button class="btn-add" data-name="Vitamina C" data-price="60000">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <h3 id="tabletas" class="category-divider">Línea Tabletas</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <div class="product-img-side">
+                            <img src="ashawagandha.jpg" alt="Ashawagandha" onerror="this.style.display='none'"> 
+                            <div class="img-placeholder">Ashawagandha</div>
+                            <button class="btn-info-toggle"><i class="fa-solid fa-info"></i></button>
+                        </div>
+                        <div class="product-info-side">
+                            <button class="btn-close-info">&times;</button>
+                            <h4>Beneficios</h4>
+                            <p>Adaptógeno que ayuda a reducir el estrés y la ansiedad.</p>
+                            <hr>
+                            <h4>Ingredientes</h4>
+                            <p>Extracto puro de raíz de Ashwagandha.</p>
+                        </div>
+                    </div>
+                    <h3>Ashawagandha</h3>
+                    <p class="product-price">$80.000</p>
+                    <button class="btn-add" data-name="Ashawagandha" data-price="80000">Añadir al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <div class="product-img-side">
+                            <img src="resveratrol.jpg" alt="Resveratrol" onerror="this.style.display='none'"> 
+                            <div class="img-placeholder">Resveratrol</div>
+                            <button class="btn-info-toggle"><i class="fa-solid fa-info"></i></button>
+                        </div>
+                        <div class="product-info-side">
+                            <button class="btn-close-info">&times;</button>
+                            <h4>Beneficios</h4>
+                            <p>Protección cardiovascular y antienvejecimiento celular.</p>
+                            <hr>
+                            <h4>Ingredientes</h4>
+                            <p>Extracto de uva y polifenoles.</p>
+                        </div>
+                    </div>
+                    <h3>Resveratrol</h3>
+                    <p class="product-price">$80.000</p>
+                    <button class="btn-add" data-name="Resveratrol" data-price="80000">Añadir al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <div class="product-img-side">
+                            <img src="zenrelif.jpg" alt="Zenrelif" onerror="this.style.display='none'"> 
+                            <div class="img-placeholder">Zenrelif</div>
+                            <button class="btn-info-toggle"><i class="fa-solid fa-info"></i></button>
+                        </div>
+                        <div class="product-info-side">
+                            <button class="btn-close-info">&times;</button>
+                            <h4>Beneficios</h4>
+                            <p>Favorece un descanso profundo y relajación muscular.</p>
+                            <hr>
+                            <h4>Ingredientes</h4>
+                            <p>Mezcla herbal de pasiflora y valeriana.</p>
+                        </div>
+                    </div>
+                    <h3>Zenrelif</h3>
+                    <p class="product-price">$80.000</p>
+                    <button class="btn-add" data-name="Zenrelif" data-price="80000">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <h3 id="liquidos" class="category-divider">Línea Líquidos</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <div class="product-img-side">
+                            <img src="kitdetox.jpeg" alt="Kit Detox" onerror="this.style.display='none'"> 
+                            <div class="img-placeholder">Kit Detox</div>
+                            <button class="btn-info-toggle"><i class="fa-solid fa-info"></i></button>
+                        </div>
+                        <div class="product-info-side">
+                            <button class="btn-close-info">&times;</button>
+                            <h4>Beneficios</h4>
+                            <p>Limpieza profunda del hígado y el sistema digestivo.</p>
+                            <hr>
+                            <h4>Ingredientes</h4>
+                            <p>Extractos líquidos purificantes.</p>
+                        </div>
+                    </div>
+                    <h3>Kit Detox</h3>
+                    <p class="product-price">$50.000</p>
+                    <button class="btn-add" data-name="Kit Detox" data-price="50000">Añadir al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <div class="product-img-side">
+                            <img src="egal-prime.jpg" alt="Egal Prime" onerror="this.style.display='none'"> 
+                            <div class="img-placeholder">Egal Prime</div>
+                            <button class="btn-info-toggle"><i class="fa-solid fa-info"></i></button>
+                        </div>
+                        <div class="product-info-side">
+                            <button class="btn-close-info">&times;</button>
+                            <h4>Beneficios</h4>
+                            <p>Aporte de vitalidad y energía sostenida para el día.</p>
+                            <hr>
+                            <h4>Ingredientes</h4>
+                            <p>Complejo B y extractos energizantes.</p>
+                        </div>
+                    </div>
+                    <h3>Egal Prime</h3>
+                    <p class="product-price">$60.000</p>
+                    <button class="btn-add" data-name="Egal Prime" data-price="60000">Añadir al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <div class="product-img-side">
+                            <img src="branpro.jpg" alt="Branpro" onerror="this.style.display='none'"> 
+                            <div class="img-placeholder">Branpro</div>
+                            <button class="btn-info-toggle"><i class="fa-solid fa-info"></i></button>
+                        </div>
+                        <div class="product-info-side">
+                            <button class="btn-close-info">&times;</button>
+                            <h4>Beneficios</h4>
+                            <p>Mejora la digestión rápida y evita la pesadez.</p>
+                            <hr>
+                            <h4>Ingredientes</h4>
+                            <p>Concentrado de fibra líquida.</p>
+                        </div>
+                    </div>
+                    <h3>Branpro (Fibra)</h3>
+                    <p class="product-price">$60.000</p>
+                    <button class="btn-add" data-name="Branpro" data-price="60000">Añadir al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <div class="product-img-side">
+                            <img src="braxim.jpg" alt="Braxim" onerror="this.style.display='none'"> 
+                            <div class="img-placeholder">Braxim</div>
+                            <button class="btn-info-toggle"><i class="fa-solid fa-info"></i></button>
+                        </div>
+                        <div class="product-info-side">
+                            <button class="btn-close-info">&times;</button>
+                            <h4>Beneficios</h4>
+                            <p>Alivio rápido de la acidez y protector gástrico natural.</p>
+                            <hr>
+                            <h4>Ingredientes</h4>
+                            <p>Extractos calmantes estomacales.</p>
+                        </div>
+                    </div>
+                    <h3>Braxim (Antiácido)</h3>
+                    <p class="product-price">$60.000</p>
+                    <button class="btn-add" data-name="Braxim" data-price="60000">Añadir al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <div class="product-img-side">
+                            <img src="ceretil.jpg" alt="Ceretil" onerror="this.style.display='none'"> 
+                            <div class="img-placeholder">Ceretil</div>
+                            <button class="btn-info-toggle"><i class="fa-solid fa-info"></i></button>
+                        </div>
+                        <div class="product-info-side">
+                            <button class="btn-close-info">&times;</button>
+                            <h4>Beneficios</h4>
+                            <p>Mejora la concentración, el enfoque y la oxigenación cerebral.</p>
+                            <hr>
+                            <h4>Ingredientes</h4>
+                            <p>Tónico cerebral natural.</p>
+                        </div>
+                    </div>
+                    <h3>Ceretil (Cerebral)</h3>
+                    <p class="product-price">$60.000</p>
+                    <button class="btn-add" data-name="Ceretil" data-price="60000">Añadir al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <div class="product-img-side">
+                            <img src="klorineh.jpg" alt="Klorineh" onerror="this.style.display='none'"> 
+                            <div class="img-placeholder">Klorinet</div>
+                            <button class="btn-info-toggle"><i class="fa-solid fa-info"></i></button>
+                        </div>
+                        <div class="product-info-side">
+                            <button class="btn-close-info">&times;</button>
+                            <h4>Beneficios</h4>
+                            <p>Relajante muscular, previene calambres y apoya el sistema nervioso.</p>
+                            <hr>
+                            <h4>Ingredientes</h4>
+                            <p>Cloruro y sales de magnesio.</p>
+                        </div>
+                    </div>
+                    <h3>Klorinet (Magnesio)</h3>
+                    <p class="product-price">$60.000</p>
+                    <button class="btn-add" data-name="Klorinet" data-price="60000">Añadir al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <div class="product-img-side">
+                            <img src="vinagre.jpg" alt="Vinagre de Manzana" onerror="this.style.display='none'"> 
+                            <div class="img-placeholder">Vinagre de manzana</div>
+                            <button class="btn-info-toggle"><i class="fa-solid fa-info"></i></button>
+                        </div>
+                        <div class="product-info-side">
+                            <button class="btn-close-info">&times;</button>
+                            <h4>Beneficios</h4>
+                            <p>Ayuda al control metabólico y equilibra el pH.</p>
+                            <hr>
+                            <h4>Ingredientes</h4>
+                            <p>Vinagre de sidra de manzana orgánico.</p>
+                        </div>
+                    </div>
+                    <h3>Vinagre de manzana</h3>
+                    <p class="product-price">$50.000</p>
+                    <button class="btn-add" data-name="Vinagre de manzana" data-price="50000">Añadir al carrito</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <div class="product-img-side">
+                            <img src="colg-go.jpg" alt="Colg-go" onerror="this.style.display='none'"> 
+                            <div class="img-placeholder">Colg-go</div>
+                            <button class="btn-info-toggle"><i class="fa-solid fa-info"></i></button>
+                        </div>
+                        <div class="product-info-side">
+                            <button class="btn-close-info">&times;</button>
+                            <h4>Beneficios</h4>
+                            <p>Lubricación articular y mantenimiento de cartílagos.</p>
+                            <hr>
+                            <h4>Ingredientes</h4>
+                            <p>Colágeno líquido bebible.</p>
+                        </div>
+                    </div>
+                    <h3>Colg-go</h3>
+                    <p class="product-price">$60.000</p>
+                    <button class="btn-add" data-name="Colg-go" data-price="60000">Añadir al carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="sale-banner">
+            <div class="banner-text">
+                <h2>Oferta de Bienestar</h2>
+                <p>Hasta un 20% de descuento en tu primera compra de kits naturales.</p>
+                <a href="#productos" class="btn-white">Comprar ahora</a>
+            </div>
+        </section>
+    </main>
+
+    <aside id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <button id="close-cart"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div id="cart-items" class="cart-items-container">
+            <p class="empty-msg">Tu carrito está vacío</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Total:</span>
+                <span id="cart-total">$0</span>
+            </div>
+            <button id="checkout-whatsapp" class="btn-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Finalizar por WhatsApp
+            </button>
+        </div>
+    </aside>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2 class="logo">SHALOM</h2>
+                <p>Pureza y bienestar natural para tu piel y espíritu.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces</h4>
+                <a href="#inicio">Inicio</a>
+                <a href="#productos">Productos</a>
+                <a href="#">Sobre Nosotros</a>
+            </div>
+            <div class="footer-legal">
+                <h4>Ayuda</h4>
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+                <a href="#">Envíos</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Shalom. El latido de lo natural.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
