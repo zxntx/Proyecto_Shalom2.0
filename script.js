@@ -15,8 +15,7 @@ const checkoutBtn = document.getElementById('checkout-whatsapp');
 cartIcon.addEventListener('click', () => cartSidebar.classList.add('active'));
 closeCartBtn.addEventListener('click', () => cartSidebar.classList.remove('active'));
 
-// Añadir al carrito
-// Añadir al carrito
+// AÑADIR AL CARRITO
 addToCartBtns.forEach(button => {
     button.addEventListener('click', (e) => {
         const name = e.target.getAttribute('data-name');
@@ -31,16 +30,26 @@ addToCartBtns.forEach(button => {
 
         updateCartUI();
 
-        // --- EL CAMBIO ESTÁ AQUÍ ---
-        // Comentamos la línea que abre el sidebar:
-        // cartSidebar.classList.add('active'); 
-
-        // Añadimos una animación al icono de la bolsa para que el usuario sepa que funcionó
+        // 1. Animación de la bolsa (la que ya tienes)
         const icon = document.querySelector('#cart-icon');
-        icon.classList.add('bump'); 
+        icon.classList.add('bump');
         setTimeout(() => icon.classList.remove('bump'), 300);
+
+        // 2. MOSTRAR EL MENSAJE "AÑADIDO"
+        showToast(); 
     });
 });
+
+// Función para el mensaje flotante
+function showToast() {
+    const toast = document.getElementById('toast-notification');
+    toast.classList.add('show');
+    
+    // Se esconde después de 2 segundos
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
 
 // Cambiar cantidad de un producto
 window.changeQuantity = function(index, delta) {
