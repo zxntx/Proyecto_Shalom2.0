@@ -48,7 +48,7 @@ function showToast() {
     // Se esconde después de 2 segundos
     setTimeout(() => {
         toast.classList.remove('show');
-    }, 2000);
+    }, 1000);
 }
 
 // Cambiar cantidad de un producto
