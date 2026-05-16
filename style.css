@@ -424,3 +424,15 @@ footer { background: var(--poison-soft); padding: 60px 5% 40px; border-top: 1px 
 .toast.show {
     transform: translateX(-50%) translateY(0); /* Sube a su posición */
 }
+
+.seo-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
