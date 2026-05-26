@@ -436,3 +436,38 @@ footer { background: var(--poison-soft); padding: 60px 5% 40px; border-top: 1px 
     border: 0;
 }
 
+/* --- BOTÓN FLOTANTE DE WHATSAPP --- */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; /* Se ubica en la esquina inferior derecha */
+  background-color: #55ba5c; /* Tu color Poison Green */
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Asegura que flote por encima de todo */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima */
+.whatsapp-btn:hover {
+  transform: scale(1.1); /* Se agranda un poquito */
+  background-color: #44a64b; /* Un verde un poquito más oscuro */
+}
+
+/* Animación de pulso suave para llamar la atención sin molestar */
+@keyframes pulse-whatsapp {
+  0% { box-shadow: 0 0 0 0 rgba(85, 186, 92, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(85, 186, 92, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(85, 186, 92, 0); }
+}
+
+.whatsapp-btn {
+  animation: pulse-whatsapp 2s infinite;
+}
+
