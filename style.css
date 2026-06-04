@@ -224,9 +224,12 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--poison-dark);
+    color: var(--white); /* Texto blanco... */
+    background-color: var(--poison-dark); /* ...sobre un fondo verde oscuro sólido */
+    padding: 8px 16px;
+    border-radius: 4px;
     font-weight: bold;
-    opacity: 0.9; /* Mayor opacidad para asegurar la lectura */
+    opacity: 1; /* Máxima visibilidad */
     z-index: 1;
 }
 
@@ -500,5 +503,13 @@ footer { background: var(--poison-soft); padding: 60px 5% 40px; border-top: 1px 
   border: 2px solid var(--poison-green);
   z-index: -1;
   animation: pulse-whatsapp 2s infinite ease-out;
+}
+
+/* Separación forzada para los enlaces legales del pie de página */
+.footer-grid a[href="politicas.html"], 
+.footer-grid a[href^="https://wa.me"] {
+    display: inline-block;
+    margin: 15px 0 !important; /* Añade espacio arriba y abajo */
+    padding: 12px 10px !important; /* Agranda el área táctil para el dedo */
 }
 
