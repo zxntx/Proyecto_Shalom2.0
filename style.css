@@ -515,3 +515,53 @@ footer { background: var(--poison-soft); padding: 60px 5% 40px; border-top: 1px 
     padding: 12px 10px !important; /* Agranda el área táctil para el dedo */
 }
 
+/* --- OPTIMIZACIÓN DE CONTRASTE: BANNER DE OFERTAS --- */
+.sale-banner {
+    background-color: #1a1a1a !important; /* Fondo oscuro sólido para resaltar los textos */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.sale-banner h2 {
+    color: #ffffff !important; /* Blanco puro de alta legibilidad */
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.sale-banner p {
+    color: #f0f0f0 !important; /* Gris ultra claro de alto contraste */
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+/* El botón blanco ahora tendrá texto completamente oscuro */
+.btn-white {
+    display: inline-block;
+    background-color: #ffffff !important;
+    color: #1a1a1a !important; /* Texto oscuro sobre fondo blanco = Contraste perfecto */
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-white:hover {
+    background-color: #e5e5e5 !important;
+}
+
+/* --- OPTIMIZACIÓN TÁCTIL: ENLACES DEL PIE DE PÁGINA --- */
+.footer-bottom p a {
+    display: inline-block;    /* Permite que el padding expanda el área de clic real */
+    padding: 12px 16px;       /* Área invisible ampliada para que el dedo lo toque sin fallar */
+    margin: 4px 0;            /* Separa verticalmente un enlace del otro */
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+/* Ajuste opcional para que el enlace de WhatsApp se mantenga estético con su emoji */
+.footer-bottom p a[href^="https://wa.me"] {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
