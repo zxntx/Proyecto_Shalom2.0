@@ -4,19 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Local y Palabras Clave -->
     <title>Shalom | Suplementos Naturales y Bienestar en Bogotá y Madrid Cundinamarca</title>
-    <link rel="preload" href="style.css" as="style">
     <meta name="description" content="Encuentra Inositol, Colágeno y Kits Detox en Shalom. Productos naturales para tu bienestar con envío a todo Bogotá. Encuentra los mejores suplementos naturales en Shalom. Bienestar y belleza con envíos en Bogotá y Madrid, Cundinamarca. ¡Tu salud comienza aquí!">
     <meta name="keywords" content="suplementos naturales bogota, inositol bogota, kit detox, colageno hidrolizado, shalom bienestar, Suplementos naturales Madrid Cundinamarca">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph (Miniatura optimizada para WhatsApp con tu Logo) -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Shalom - Bienestar Natural">
     <meta property="og:description" content="Tu tienda de confianza para productos naturales. ¡Haz tu pedido por WhatsApp!">
     <meta property="og:url" content="https://shalomoficial.vercel.app">
-    <!-- CAMBIA 'tu-logo.png' por el nombre exacto de tu archivo (ej: logo.png, logo.jpg) -->
     <meta property="og:image" content="https://shalomoficial.vercel.app/shalom-logo.jpeg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,13 +20,578 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
-          media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 1. VARIABLES - POISON GREEN EDITION */
+:root {
+    --poison-green: #55ba5c;
+    --poison-dark: #2E7D32;
+    --poison-soft: #F4FAF4;
+    --poison-distinto: #b3f1b3;
+    --white: #FFFFFF;
+    --text-black: #1A1A1A;
+    --text-grey: #6E6E73;
+    --border-light: #EBEBEB;
+    --serif: 'Playfair Display', serif;
+    --sans: 'Inter', sans-serif;
+}
+
+/* 2. RESET Y BASES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--sans);
+    color: var(--text-black);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+/* 3. HEADER (Minimalista y Sticky) */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--text-black);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-black);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 30px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover { color: var(--poison-green); }
+
+#cart-icon {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+#cart-count {
+    background: var(--poison-green);
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
+
+/* 4. HERO SECTION */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    background: linear-gradient(180deg, var(--white) 0%, var(--poison-distinto) 100%);
+}
+
+.hero-content { max-width: 800px; }
+
+.hero-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--poison-green);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 30px;
+    line-height: 1.1;
+}
+
+/* 1. Mejora de Contraste */
+.btn-poison {
+    display: inline-block;
+    background: var(--poison-dark); /* Usamos tu verde oscuro para contrastar con el texto blanco */
+    color: var(--white);
+    padding: 18px 45px;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 2px;
+    transition: all 0.4s ease;
+}
+
+.btn-poison:hover {
+    background: var(--poison-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(67, 179, 77, 0.2);
+}
+
+/* 5. BENEFICIOS */
+.benefits {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px 5%;
+    background: var(--poison-soft);
+    text-align: center;
+}
+
+.benefit-item i {
+    font-size: 32px;
+    color: var(--poison-green);
+    margin-bottom: 15px;
+}
+
+.benefit-item h3 { font-family: var(--serif); margin-bottom: 10px; }
+.benefit-item p { font-size: 14px; color: var(--text-grey); }
+
+/* 6. PRODUCTOS Y NAVEGACIÓN */
+.products-section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; text-align: center; }
+
+.section-tag {
+    color: var(--poison-dark); /* Oscurecido para contrastar sobre el fondo blanco */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+
+.section-title { font-family: var(--serif); font-size: 36px; margin-bottom: 50px; }
+
+.category-nav { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap; }
+.cat-link { text-decoration: none; color: var(--text-grey); font-family: var(--sans); font-size: 14px; font-weight: 600; padding: 8px 20px; border: 1px solid var(--border-light); border-radius: 25px; transition: all 0.3s ease; }
+.cat-link:hover { background: var(--poison-green); color: var(--white); border-color: var(--poison-green); }
+.category-divider { font-family: var(--serif); font-size: 24px; color: var(--text-black); text-align: left; margin: 60px 0 30px 0; padding-bottom: 10px; border-bottom: 2px solid var(--poison-soft); text-transform: uppercase; letter-spacing: 2px; scroll-margin-top: 100px; }
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.product-card {
+    transition: all 0.4s ease;
+    padding: 20px;
+    border-radius: 8px;
+    animation: fadeInUp 0.8s ease backwards;
+}
+
+.product-card:hover { transform: translateY(-10px); }
+.product-card:nth-child(1) { animation-delay: 0.1s; }
+.product-card:nth-child(2) { animation-delay: 0.2s; }
+.product-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* CONTENEDOR DE IMAGEN E INFORMACIÓN */
+.product-img-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 4px;
+    background: var(--poison-soft);
+    margin-bottom: 25px;
+}
+
+.product-img-side {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.product-img-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white) !important; /* Texto blanco puro */
+    background-color: var(--poison-dark) !important; /* Fondo verde oscuro con alto contraste */
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 1 !important; /* Cero transparencias para que Google no moleste */
+    z-index: 1;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn-info-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--poison-green);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.btn-info-toggle:hover {
+    background-color: var(--poison-dark);
+    color: white;
+    transform: scale(1.1);
+}
+
+.product-info-side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 20;
+    box-sizing: border-box;
+}
+
+.product-info-side.active {
+    transform: translateY(0);
+}
+
+.btn-close-info {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #94a3b8;
+}
+
+.product-info-side h4 { color: var(--poison-green); font-size: 14px; margin-bottom: 5px; text-transform: uppercase; }
+.product-info-side p { font-size: 13px; color: #475569; margin-bottom: 15px; }
+.product-info-side hr { width: 40%; border: 0.5px solid #e2e8f0; margin: 10px 0; }
+
+.product-card h3 { font-family: var(--serif); font-size: 22px; margin-bottom: 10px; }
+.product-price { font-weight: 600; font-size: 18px; margin-bottom: 20px; color: var(--text-black); }
+
+.btn-add {
+    background: transparent;
+    border: 1px solid var(--text-black);
+    padding: 12px 25px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.btn-add:hover {
+    background: var(--text-black);
+    color: var(--white);
+}
+
+/* 7. BANNER PROMOCIONAL */
+.sale-banner {
+    background: var(--poison-green);
+    padding: 100px 5%;
+    text-align: center;
+    color: var(--white);
+}
+
+.banner-text h2 { font-family: var(--serif); font-size: 48px; margin-bottom: 20px; }
+.banner-text p { margin-bottom: 40px; font-size: 18px; }
+.btn-white { background: var(--white); color: var(--poison-green); padding: 15px 40px; text-decoration: none; font-weight: bold; text-transform: uppercase; }
+
+/* 8. CARRITO SIDEBAR */
+.cart-sidebar {
+    position: fixed;
+    top: 0; right: 0;
+    width: 400px; height: 100vh;
+    background: var(--white);
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    z-index: 2000;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.cart-sidebar.active { transform: translateX(0); }
+.cart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+.cart-header h3 { font-family: var(--serif); font-size: 24px; }
+#close-cart { background: none; border: none; font-size: 24px; cursor: pointer; }
+.cart-items-container { flex-grow: 1; overflow-y: auto; }
+.cart-footer { border-top: 1px solid var(--border-light); padding-top: 30px; }
+.total-row { display: flex; justify-content: space-between; font-size: 20px; font-weight: bold; margin-bottom: 20px; }
+
+.btn-whatsapp {
+    width: 100%;
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 4px;
+}
+
+.cart-item-row { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--border-light); }
+.cart-item-info { display: flex; flex-direction: column; gap: 5px; }
+.quantity-controls { display: flex; align-items: center; gap: 12px; margin-top: 8px; background: var(--poison-soft); width: fit-content; padding: 4px 10px; border-radius: 20px; }
+.quantity-controls button { background: none; border: none; color: var(--poison-green); font-weight: bold; font-size: 18px; cursor: pointer; padding: 0 5px; transition: transform 0.2s; }
+.quantity-controls button:hover { transform: scale(1.3); }
+.quantity-controls span { font-size: 14px; font-weight: 600; min-width: 20px; text-align: center; }
+.btn-remove { background: none; border: none; color: #ff4d4d; cursor: pointer; font-size: 16px; padding: 5px; transition: transform 0.2s; }
+.btn-remove:hover { transform: scale(1.2); }
+
+/* 9. FOOTER */
+footer { background: var(--poison-soft); padding: 60px 5% 40px; border-top: 1px solid var(--border-light); }
+.footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; margin-bottom: 50px; }
+.footer-brand .logo { position: static; transform: none; display: block; margin-bottom: 15px; margin-top: -10px; }
+.footer-grid h4 { text-transform: uppercase; font-size: 12px; letter-spacing: 2px; margin-bottom: 20px; }
+.footer-grid a {
+    display: block;
+    text-decoration: none;
+    color: var(--text-grey);
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 8px 0; /* Agrega espacio vertical para facilitar el toque en celulares */
+    transition: color 0.3s;
+}
+.footer-grid a:hover { color: var(--poison-green); }
+.social-links a {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 10px; /* Expande el área táctil de los iconos */
+}
+
+.footer-bottom { text-align: center; border-top: 1px solid #ddd; padding-top: 30px; font-size: 12px; color: var(--text-grey); }
+
+/* RESPONSIVO CELULAR */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .cart-sidebar { width: 100%; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animación para el icono del carrito al añadir productos */
+#cart-icon {
+    transition: transform 0.2s ease;
+}
+
+#cart-icon.bump {
+    transform: scale(1.3); /* Crece un 30% */
+    color: var(--poison-green); /* Cambia a verde Shalom momentáneamente */
+}
+
+/* Opcional: Feedback en el botón de añadir */
+.btn-add:active {
+    background-color: var(--poison-green);
+    border-color: var(--poison-green);
+    transform: scale(0.95);
+}
+
+/* Estilos para el mensaje flotante (Toast) */
+/* Notificación de carrito */
+.toast {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100px);
+    background: var(--poison-dark); /* Antes era var(--poison-green) */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 3000;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0); /* Sube a su posición */
+}
+
+.seo-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* --- BOTÓN FLOTANTE DE WHATSAPP --- */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--poison-dark); /* Antes era var(--poison-green) */
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima */
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  background-color: #1b4d1e; /* Un verde aún más oscuro para el hover */
+}
+
+@keyframes pulse-whatsapp {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Nuevo efecto de pulso hiper-optimizado usando transform */
+.whatsapp-btn::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid var(--poison-dark); /* Antes era #55ba5c */
+  z-index: -1;
+  animation: pulse-whatsapp 2s infinite ease-out;
+}
+
+/* Separación forzada para los enlaces legales del pie de página */
+.footer-grid a[href="politicas.html"], 
+.footer-grid a[href^="https://wa.me"] {
+    display: inline-block;
+    margin: 15px 0 !important; /* Añade espacio arriba y abajo */
+    padding: 12px 10px !important; /* Agranda el área táctil para el dedo */
+}
+
+/* --- OPTIMIZACIÓN DE CONTRASTE: BANNER DE OFERTAS --- */
+.sale-banner {
+    background-color: #1a1a1a !important; /* Fondo oscuro sólido para resaltar los textos */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.sale-banner h2 {
+    color: #ffffff !important; /* Blanco puro de alta legibilidad */
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.sale-banner p {
+    color: #f0f0f0 !important; /* Gris ultra claro de alto contraste */
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+/* El botón blanco ahora tendrá texto completamente oscuro */
+.btn-white {
+    display: inline-block;
+    background-color: #ffffff !important;
+    color: #1a1a1a !important; /* Texto oscuro sobre fondo blanco = Contraste perfecto */
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-white:hover {
+    background-color: #e5e5e5 !important;
+}
+
+/* --- OPTIMIZACIÓN TÁCTIL: ENLACES DEL PIE DE PÁGINA --- */
+.footer-bottom p a {
+    display: inline-block;    /* Permite que el padding expanda el área de clic real */
+    padding: 12px 16px;       /* Área invisible ampliada para que el dedo lo toque sin fallar */
+    margin: 4px 0;            /* Separa verticalmente un enlace del otro */
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+/* Ajuste opcional para que el enlace de WhatsApp se mantenga estético con su emoji */
+.footer-bottom p a[href^="https://wa.me"] {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+    </style>
 </head>
 <body>
 
