@@ -24,14 +24,10 @@ html {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: var(--sans);
     color: var(--text-black);
     background-color: var(--white);
     line-height: 1.6;
-}
-
-h1, h2, h3 {
-    font-family: 'Playfair Display', Georgia, serif;
 }
 
 /* 3. HEADER (Minimalista y Sticky) */
